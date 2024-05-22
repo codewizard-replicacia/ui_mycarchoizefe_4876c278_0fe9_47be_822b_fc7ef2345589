@@ -1,0 +1,62 @@
+{
+
+"vehicle": [
+    {
+        "key": "VehId",
+        "type": "keyid"
+    }
+    
+    ,{
+        "key": "MainPhoto",
+        "label": "MainPhoto",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG",
+        "width": "30%",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Segment",
+        "label": "Segment",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Segment",
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "Location",
+        "label": "Location",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "VehicleModel",
+        "label": "Model",
+        "type": "dropdown",
+        "valueId": "ModelId",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Model",
+        "create": true,
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}

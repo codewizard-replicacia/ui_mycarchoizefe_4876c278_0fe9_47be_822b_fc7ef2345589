@@ -1,0 +1,44 @@
+{
+
+"booking": [
+    {
+        "key": "BookingId",
+        "type": "keyid"
+    }
+    
+    ,{
+        "key": "DateOfBooking",
+        "label": "DateOfBooking",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "StartDateTime",
+        "label": "StartDateTime",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "EndDateTime",
+        "label": "EndDateTime",
+        "type": "date",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "TotalAmount",
+        "label": "TotalAmount",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isFloat"
+, "isPositive"
+        ]
+                            }
+]
+}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Model">
+            <EntityType HasStream="false" Name="Package">
+                <Key>
+                    <PropertyRef Name="CmId"/>
+                </Key>
+                <Property Name="CmId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="NoOfKmDailyLimit" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="TotalCost" Type="Edm.Decimal" isUnique="false"/>
+                <Property Name="FreeKm" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="IsDailyKmUnlimited" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="TotalKmUnlimited" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="Duration" Type="Edm.String" isUnique="false"/>
+                <Property Name="ExtraChargePerKm" Type="Edm.Decimal" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="true" Name="Document">
+                <Key>
+                    <PropertyRef Name="DocId"/>
+                </Key>
+                <Property Name="DocId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="DocName" Type="Edm.String" isUnique="false"/>
+                <Property Name="DocDesc" Type="Edm.String" isUnique="false"/>
+                <Property Name="DocLocation" Type="Edm.String" isUnique="false"/>
+                <Property Name="DocType" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Insurance">
+                <Key>
+                    <PropertyRef Name="InsuranceId"/>
+                </Key>
+                <Property Name="InsuranceId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Type" Type="Model.InsuranceType" isUnique="false"/>
+                <Property Name="Title" Type="Edm.String" isUnique="false"/>
+                <Property Name="Description" Type="Edm.String" isUnique="false"/>
+                <Property Name="Cost" Type="Edm.Decimal" isUnique="false"/>
+                <Property Name="InsuranceCompany" Type="Edm.String" isUnique="false"/>
+                <Property Name="CompanyContact" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Model">
+                <Key>
+                    <PropertyRef Name="ModelId"/>
+                </Key>
+                <Property Name="ModelId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Name" Type="Edm.String" isUnique="false"/>
+                <Property Name="Manufacturer" Type="Edm.String" isUnique="false"/>
+                <Property Name="ModelYear" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Color" Type="Edm.String" isUnique="false"/>
+                <Property Name="Attribute6" Type="Edm.String" isUnique="false"/>
+                <Property Name="Attribute7" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="PickupDropLocation">
+                <Key>
+                    <PropertyRef Name="PdLocId"/>
+                </Key>
+                <Property Name="PdLocId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="PickupOrDropLocation" Type="Model.PickupOrDrop" isUnique="false"/>
+                <Property Name="LocationSimpleName" Type="Edm.String" isUnique="false"/>
+                <Property Name="LocationFullAddress" Type="Edm.String" isUnique="false"/>
+                <Property Name="AvailableTimeRange" Type="Edm.String" isUnique="false"/>
+                <Property Name="Cost" Type="Edm.Decimal" isUnique="false"/>
+                <Property Name="LocationType" Type="Edm.String" isUnique="false"/>
+                <Property Name="Attribute1" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Booking">
+                <Key>
+                    <PropertyRef Name="BookingId"/>
+                </Key>
+                <Property Name="BookingId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="StartDateTime" Type="Edm.DateTimeOffset" isUnique="false"/>
+                <Property Name="EndDateTime" Type="Edm.DateTimeOffset" isUnique="false"/>
+                <Property Name="DateOfBooking" Type="Edm.DateTimeOffset" isUnique="false"/>
+                <Property Name="TermsAgreed" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="TotalAmount" Type="Edm.Decimal" isUnique="false"/>
+                <Property Name="Attribute7" Type="Edm.String" isUnique="false"/>
+                <NavigationProperty Name="PickupAt" Type="Model.PickupDropLocation"/>
+                <NavigationProperty Name="Charges" Type="Collection(Model.Charge)"/>
+                <NavigationProperty Name="GST" Type="Model.Charge"/>
+                <NavigationProperty Name="RefundableDeposit" Type="Model.Charge"/>
+                <NavigationProperty Name="DropAt" Type="Model.PickupDropLocation"/>
+                <NavigationProperty Name="BookedVehicle" Type="Model.Vehicle"/>
+                <NavigationProperty Name="Selected_Insurance_Plans" Type="Collection(Model.Insurance)"/>
+                <NavigationProperty Name="PromoCode" Type="Model.Charge"/>
+                <NavigationProperty Name="Selected_Package" Type="Model.Package"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Charge">
+                <Key>
+                    <PropertyRef Name="ChargeId"/>
+                </Key>
+                <Property Name="ChargeId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="ChargeTitle" Type="Edm.String" isUnique="false"/>
+                <Property Name="ChargeAmount" Type="Edm.Decimal" isUnique="false"/>
+                <Property Name="ChargeDescription" Type="Edm.String" isUnique="false"/>
+                <Property Name="ChargeBreakup" Type="Collection(Edm.String)" isUnique="false"/>
+                <Property Name="Attribute6" Type="Edm.String" isUnique="false"/>
+            </EntityType>
+            <EntityType HasStream="false" Name="Vehicle">
+                <Key>
+                    <PropertyRef Name="VehId"/>
+                </Key>
+                <Property Name="VehId" Type="Edm.Int32" isUnique="false"/>
+                <Property Name="Segment" Type="Model.Segment" isUnique="false"/>
+                <Property Name="Location" Type="Edm.String" isUnique="false"/>
+                <Property Name="Name" Type="Edm.String" isUnique="false"/>
+                <Property Name="VehicleInsuranceIncluded" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="RoadsideAssistanceIncluded" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="Inclusions" Type="Collection(Edm.String)" isUnique="false"/>
+                <Property Name="Exclusions" Type="Collection(Edm.String)" isUnique="false"/>
+                <Property Name="Facilities" Type="Collection(Edm.String)" isUnique="false"/>
+                <Property Name="TermsAndConditions" Type="Collection(Edm.String)" isUnique="false"/>
+                <Property Name="LuggageCarrier" Type="Edm.Boolean" isUnique="false"/>
+                <Property Name="Attribute4" Type="Edm.String" isUnique="false"/>
+                <Property Name="Attribute5" Type="Edm.String" isUnique="false"/>
+                <NavigationProperty Name="MainPhoto" Type="Model.Document"/>
+                <NavigationProperty Name="OtherImages" Type="Collection(Model.Document)"/>
+                <NavigationProperty Name="Offered_Packages" Type="Collection(Model.Package)"/>
+                <NavigationProperty Name="Offered_Insurance_Plans" Type="Collection(Model.Insurance)"/>
+                <NavigationProperty Name="Model" Type="Model.Model"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="Packages" EntityType="Model.Package"/>
+                <EntitySet Name="Documents" EntityType="Model.Document"/>
+                <EntitySet Name="Insurances" EntityType="Model.Insurance"/>
+                <EntitySet Name="Models" EntityType="Model.Model"/>
+                <EntitySet Name="PickupDropLocations" EntityType="Model.PickupDropLocation"/>
+                <EntitySet Name="Bookings" EntityType="Model.Booking">
+                    <NavigationPropertyBinding Path="PickupAt" Target="PickupDropLocations"/>
+                    <NavigationPropertyBinding Path="Charges" Target="Charges"/>
+                    <NavigationPropertyBinding Path="GST" Target="Charges"/>
+                    <NavigationPropertyBinding Path="RefundableDeposit" Target="Charges"/>
+                    <NavigationPropertyBinding Path="DropAt" Target="PickupDropLocations"/>
+                    <NavigationPropertyBinding Path="BookedVehicle" Target="Vehicles"/>
+                    <NavigationPropertyBinding Path="Selected_Insurance_Plans" Target="Insurances"/>
+                    <NavigationPropertyBinding Path="PromoCode" Target="Charges"/>
+                    <NavigationPropertyBinding Path="Selected_Package" Target="Packages"/>
+                </EntitySet>
+                <EntitySet Name="Charges" EntityType="Model.Charge"/>
+                <EntitySet Name="Vehicles" EntityType="Model.Vehicle">
+                    <NavigationPropertyBinding Path="MainPhoto" Target="Documents"/>
+                    <NavigationPropertyBinding Path="OtherImages" Target="Documents"/>
+                    <NavigationPropertyBinding Path="Offered_Packages" Target="Packages"/>
+                    <NavigationPropertyBinding Path="Offered_Insurance_Plans" Target="Insurances"/>
+                    <NavigationPropertyBinding Path="Model" Target="Models"/>
+                </EntitySet>
+            </EntityContainer>
+            <EnumType Name="FuelType">
+                <Member Name="Petrol" Value="0"/>
+                <Member Name="Diesel" Value="1"/>
+                <Member Name="LPG" Value="2"/>
+                <Member Name="CNG" Value="3"/>
+                <Member Name="Electric" Value="4"/>
+                <Member Name="FuelType6" Value="5"/>
+            </EnumType>
+            <EnumType Name="TransmissionType">
+                <Member Name="Manual" Value="0"/>
+                <Member Name="Fully_Automatic" Value="1"/>
+                <Member Name="Semi_Automatic" Value="2"/>
+            </EnumType>
+            <EnumType Name="Segment">
+                <Member Name="Super_Economy" Value="0"/>
+                <Member Name="Ecomony" Value="1"/>
+                <Member Name="Compact" Value="2"/>
+                <Member Name="Standard" Value="3"/>
+                <Member Name="MUV" Value="4"/>
+                <Member Name="SUV" Value="5"/>
+                <Member Name="Segment7" Value="6"/>
+                <Member Name="Segment8" Value="7"/>
+            </EnumType>
+            <EnumType Name="PickupOrDrop">
+                <Member Name="Pickup_Location" Value="0"/>
+                <Member Name="Drop_Location" Value="1"/>
+            </EnumType>
+            <EnumType Name="InsuranceType">
+                <Member Name="Personal_Accidental" Value="0"/>
+                <Member Name="Emergency_Medical" Value="1"/>
+                <Member Name="Emergency_Repatriation" Value="2"/>
+                <Member Name="DailyAllowance_Hospital" Value="3"/>
+                <Member Name="Loss_Of_CreditCard_Liability" Value="4"/>
+                <Member Name="Home_Burglary" Value="5"/>
+                <Member Name="Insurance_Type_Seven" Value="6"/>
+            </EnumType>
+            <EnumType Name="SeatingCapacity">
+                <Member Name="Five_Seater" Value="0"/>
+                <Member Name="Seven_Seater" Value="1"/>
+                <Member Name="Ten_Seater" Value="2"/>
+            </EnumType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

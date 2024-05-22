@@ -1,0 +1,146 @@
+{
+
+"vehiclebookedvehicle": [
+    {
+        "key": "VehId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "Name",
+        "label": "Name",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "MainPhoto",
+        "label": "MainPhoto",
+        "type": "doc",
+        "accept": ".JPG,.JPEG,.PNG",
+        "width": "30%",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Segment",
+        "label": "Segment",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "Segment",
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "Location",
+        "label": "Location",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+
+,"pickupdroplocationpickupat": [
+    {
+        "key": "PdLocId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "PickupOrDropLocation",
+        "label": "PickupOrDropLocation",
+        "type": "dropdown",
+        "valueId": "Value",
+        "nameId": "Name",
+        "contentId": "Name",
+        "source": "PickupOrDrop",
+        "editable": true,
+        "validators": [
+             "isNumber"
+        ]
+                            }
+    ,{
+        "key": "LocationType",
+        "label": "LocationType",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "LocationSimpleName",
+        "label": "LocationSimpleName",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "LocationFullAddress",
+        "label": "LocationFullAddress",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "AvailableTimeRange",
+        "label": "AvailableTimeRange",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "Cost",
+        "label": "Cost",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isFloat"
+, "isPositive"
+        ]
+                            }
+]
+
+,"chargecharges": [
+    {
+        "key": "ChargeId",
+        "type": "keyid"
+    }
+
+    ,{
+        "key": "ChargeTitle",
+        "label": "ChargeTitle",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+    ,{
+        "key": "ChargeAmount",
+        "label": "ChargeAmount",
+        "type": "text",
+        "editable": true,
+        "validators": [
+             "isFloat"
+, "isPositive"
+        ]
+                            }
+    ,{
+        "key": "ChargeDescription",
+        "label": "ChargeDescription",
+        "type": "text",
+        "editable": true,
+        "validators": [
+                    ]
+                            }
+]
+}

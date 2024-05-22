@@ -1,0 +1,777 @@
+{
+        "vehicle": [
+                        {
+                            "key": "VehId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Segment",
+                            "label": "Segment",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.Segment",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Segment is required"
+                            ]
+                        },
+                        {
+                            "key": "Location",
+                            "label": "Location",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Location is required"
+                            ]
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                                                {
+                            "key": "VehicleInsuranceIncluded",
+                            "label": "VehicleInsuranceIncluded",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "VehicleInsuranceIncluded is required"
+                            ]
+                        },
+                                                {
+                            "key": "RoadsideAssistanceIncluded",
+                            "label": "RoadsideAssistanceIncluded",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "RoadsideAssistanceIncluded is required"
+                            ]
+                        },
+                        {
+                            "key": "Inclusions",
+                            "label": "Inclusions",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Inclusions is required"
+                            ]
+                        },
+                        {
+                            "key": "Exclusions",
+                            "label": "Exclusions",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Exclusions is required"
+                            ]
+                        },
+                        {
+                            "key": "Facilities",
+                            "label": "Facilities",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Facilities is required"
+                            ]
+                        },
+                        {
+                            "key": "TermsAndConditions",
+                            "label": "TermsAndConditions",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "TermsAndConditions is required"
+                            ]
+                        },
+                                                {
+                            "key": "LuggageCarrier",
+                            "label": "LuggageCarrier",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "LuggageCarrier is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute4",
+                            "label": "Attribute4",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Attribute4 is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute5",
+                            "label": "Attribute5",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Attribute5 is required"
+                            ]
+                        },
+                    {
+                        "key": "VehicleMainPhoto",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "MainPhoto",
+                        "label": "MainPhoto",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Vehicle MainPhoto is required"
+                        ]
+                    },
+                                    {
+                        "key": "VehicleOtherImages",
+                        "type": "keyid"
+                    },
+                    {
+                        "key": "OtherImages",
+                        "label": "OtherImages",
+                        "width": "30%",
+                        "type": "doc",
+                        "accept": ".JPG,.JPEG,.PNG",
+                        "editable": true,
+                        "multiple": true,
+                        "validators": [
+                            "required"
+                        ],
+                        "validationMessages": [
+                            "Vehicle OtherImages is required"
+                        ]
+                    },
+                                    {
+                        "key": "VehicleOffered_Packages",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "VehicleOffered_Insurance_Plans",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "VehicleModel",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "insurance": [
+                        {
+                            "key": "InsuranceId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Type",
+                            "label": "Type",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.InsuranceType",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Type is required"
+                            ]
+                        },
+                        {
+                            "key": "Title",
+                            "label": "Title",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Title is required"
+                            ]
+                        },
+                        {
+                            "key": "Description",
+                            "label": "Description",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Description is required"
+                            ]
+                        },
+                        {
+                            "key": "Cost",
+                            "label": "Cost",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Cost is required"
+                            ]
+                        },
+                        {
+                            "key": "InsuranceCompany",
+                            "label": "InsuranceCompany",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "InsuranceCompany is required"
+                            ]
+                        },
+                        {
+                            "key": "CompanyContact",
+                            "label": "CompanyContact",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "CompanyContact is required"
+                                ]
+                            }
+        ]
+,        "model": [
+                        {
+                            "key": "ModelId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "Name",
+                            "label": "Name",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Name is required"
+                            ]
+                        },
+                        {
+                            "key": "Manufacturer",
+                            "label": "Manufacturer",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Manufacturer is required"
+                            ]
+                        },
+                        {
+                            "key": "ModelYear",
+                            "label": "ModelYear",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ModelYear is required"
+                            ]
+                        },
+                        {
+                            "key": "Color",
+                            "label": "Color",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Color is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute6",
+                            "label": "Attribute6",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Attribute6 is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute7",
+                            "label": "Attribute7",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Attribute7 is required"
+                                ]
+                            }
+        ]
+,        "charge": [
+                        {
+                            "key": "ChargeId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "ChargeTitle",
+                            "label": "ChargeTitle",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ChargeTitle is required"
+                            ]
+                        },
+                        {
+                            "key": "ChargeAmount",
+                            "label": "ChargeAmount",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "ChargeAmount is required"
+                            ]
+                        },
+                        {
+                            "key": "ChargeDescription",
+                            "label": "ChargeDescription",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ChargeDescription is required"
+                            ]
+                        },
+                        {
+                            "key": "ChargeBreakup",
+                            "label": "ChargeBreakup",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "ChargeBreakup is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute6",
+                            "label": "Attribute6",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Attribute6 is required"
+                                ]
+                            }
+        ]
+,        "booking": [
+                        {
+                            "key": "BookingId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "StartDateTime",
+                            "label": "StartDateTime",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "StartDateTime is required"
+                            ]
+                        },
+                        {
+                            "key": "EndDateTime",
+                            "label": "EndDateTime",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "EndDateTime is required"
+                            ]
+                        },
+                        {
+                            "key": "DateOfBooking",
+                            "label": "DateOfBooking",
+                            "type": "date",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "DateOfBooking is required"
+                            ]
+                        },
+                                                {
+                            "key": "TermsAgreed",
+                            "label": "TermsAgreed",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "TermsAgreed is required"
+                            ]
+                        },
+                        {
+                            "key": "TotalAmount",
+                            "label": "TotalAmount",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "TotalAmount is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute7",
+                            "label": "Attribute7",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Attribute7 is required"
+                            ]
+                        },
+                    {
+                        "key": "BookingPickupAt",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingCharges",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingGST",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingRefundableDeposit",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingDropAt",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingBookedVehicle",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingSelected_Insurance_Plans",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingPromoCode",
+                        "type": "keyid"
+                    },
+                                    {
+                        "key": "BookingSelected_Package",
+                        "type": "keyid"
+                    }  
+                        ]
+,        "package": [
+                        {
+                            "key": "CmId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "NoOfKmDailyLimit",
+                            "label": "NoOfKmDailyLimit",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "NoOfKmDailyLimit is required"
+                            ]
+                        },
+                        {
+                            "key": "TotalCost",
+                            "label": "TotalCost",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "TotalCost is required"
+                            ]
+                        },
+                        {
+                            "key": "FreeKm",
+                            "label": "FreeKm",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Int32",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "FreeKm is required"
+                            ]
+                        },
+                                                {
+                            "key": "IsDailyKmUnlimited",
+                            "label": "IsDailyKmUnlimited",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "IsDailyKmUnlimited is required"
+                            ]
+                        },
+                                                {
+                            "key": "TotalKmUnlimited",
+                            "label": "TotalKmUnlimited",
+                            "type": "check",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "TotalKmUnlimited is required"
+                            ]
+                        },
+                        {
+                            "key": "Duration",
+                            "label": "Duration",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "Duration is required"
+                            ]
+                        },
+                        {
+                            "key": "ExtraChargePerKm",
+                            "label": "ExtraChargePerKm",
+                            "type": "dropdown",
+                                "valueId": "Value",
+                                "nameId": "Name",
+                                "contentId": "Name",
+                                "source": "Edm.Decimal",
+                                "editable": true,
+                                "validators": [
+                                    "required",
+                                    "isNumber"
+                                ],
+                                "validationMessages": [
+                                    "ExtraChargePerKm is required"
+                                ]
+                            }
+        ]
+,        "pickupdroplocation": [
+                        {
+                            "key": "PdLocId",
+                            "type": "keyid"
+                        },
+                        {
+                            "key": "PickupOrDropLocation",
+                            "label": "PickupOrDropLocation",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Model.PickupOrDrop",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "PickupOrDropLocation is required"
+                            ]
+                        },
+                        {
+                            "key": "LocationSimpleName",
+                            "label": "LocationSimpleName",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "LocationSimpleName is required"
+                            ]
+                        },
+                        {
+                            "key": "LocationFullAddress",
+                            "label": "LocationFullAddress",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "LocationFullAddress is required"
+                            ]
+                        },
+                        {
+                            "key": "AvailableTimeRange",
+                            "label": "AvailableTimeRange",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "AvailableTimeRange is required"
+                            ]
+                        },
+                        {
+                            "key": "Cost",
+                            "label": "Cost",
+                            "type": "dropdown",
+                            "valueId": "Value",
+                            "nameId": "Name",
+                            "contentId": "Name",
+                            "source": "Edm.Decimal",
+                            "editable": true,
+                            "validators": [
+                                "required",
+                                "isNumber"
+                            ],
+                            "validationMessages": [
+                                "Cost is required"
+                            ]
+                        },
+                        {
+                            "key": "LocationType",
+                            "label": "LocationType",
+                            "type": "text",
+                            "editable": true,
+                            "validators": [
+                                "required"
+                            ],
+                            "validationMessages": [
+                                "LocationType is required"
+                            ]
+                        },
+                        {
+                            "key": "Attribute1",
+                            "label": "Attribute1",
+                            "type": "text",
+                                "editable": true,
+                                "validators": [
+                                    "required"
+                                ],
+                                "validationMessages": [
+                                    "Attribute1 is required"
+                                ]
+                            }
+        ]
+}
